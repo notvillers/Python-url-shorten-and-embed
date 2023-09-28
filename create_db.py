@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import sqlite3
 
-def db_name():
+def db_name(): # return the .db name
     return 'url_short.db'
 
-def create():
+def create(): # creates the .db
     connection = sqlite3.connect(db_name())
     cursor = connection.cursor()
 
