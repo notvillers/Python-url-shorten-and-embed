@@ -17,7 +17,7 @@ for res in result:
     print("Shortened url at: " + res)
 ```
 ```
-Shortened url at: doma.in/1
+% Shortened url at: doma.in/1
 ```
 > [!WARNING]
 > Placing files manually in the shortener's destination folder can cause problems.
