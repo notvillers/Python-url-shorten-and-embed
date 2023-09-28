@@ -26,9 +26,7 @@ def create_html(text): # creates the html
     ]
     return skeleton[0] + text + skeleton[1]
 
-def shortener(link): # main
-    
-    url_pref = "sho.rt"
+def shortener(link, url_pref): # main
 
     shorts = []
 
