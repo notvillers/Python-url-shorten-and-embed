@@ -3,32 +3,32 @@ import os
 import sqlite3
 import create_db
 
-db_file = create_db.db_name()
+db_file = create_db.db_name() # creates .db if not found
 if not os.path.exists(db_file):
     create_db.create()
 connection = sqlite3.connect(db_file)
 cursor = connection.cursor()
 
-path = os.path.dirname(__file__)
+path = os.path.dirname(__file__) # Path to the redirect files, for example with Apache2: /var/www/html/
 
-def select(text):
+def select(text): # selects from the .db
     cursor.execute(text)
     return cursor.fetchall()
 
-def insert(text):
+def insert(text): # inserts into the .db
     cursor.execute(text)
     connection.commit()
 
-def create_html(text):
+def create_html(text): # creates the html
     skeleton = [
         '<!DOCTYPE html> <html> <head> <title>SEGGLY redirect</title> <meta http-equiv = "refresh" content = "0; url = ',
         '" /> </head> <body> <p>Redirecting...</p> </body> </html>'
     ]
     return skeleton[0] + text + skeleton[1]
 
-def shortener(link):
+def shortener(link): # main
     
-    url = "sho.rt"
+    url_pref = "sho.rt"
 
     shorts = []
 
@@ -50,12 +50,12 @@ def shortener(link):
         if file.endswith('.html'):
             short_nums.append(file.replace('.html',''))
 
-    urls = []
+    url = ""
 
     for short in shorts:
         if short[1] not in short_nums:
-            with open(path + "/" + short[1] + '.html', 'w') as file:
+            with open(path + "/" + short[1], 'w') as file:
                 file.write(create_html(short[0]))
-                urls.append(url + path + "/" + short[1] + '.html')
+                url = url_pref + "/" + short[1]
     
-    return urls
+    return url
