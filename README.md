@@ -1,6 +1,6 @@
 # Python URL shortener
 
-## Calling the shortener
+## Calling the shortener.py
 The bot can be called with the following syntax (if imported):
 ```
 shortener.shortener(link, url_pref)
