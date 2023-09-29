@@ -3,7 +3,7 @@
 ## Calling the shortener.py
 The bot can be called with the following syntax (if imported):
 ```
-shortener.shortener(link, url_pref)
+shortener.shorten(link, url_pref)
 ```
 For example:
 ```
@@ -11,7 +11,7 @@ import shortener
 
 result = []
 
-result.append(shortener.shortener("domain.com", "doma.in"))
+result.append(shortener.shorten("domain.com", "doma.in"))
 
 for res in result:
     print("Shortened url at: " + res)
