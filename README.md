@@ -2,8 +2,8 @@
 
 ## Calling the scripts
 
-### Calling the shortener.py
-The bot can be called with the following syntax (if imported):
+### shortener.py
+Syntax:
 ```
 shortener.run(link, url_pref, path_to_directory)
 ```
@@ -21,12 +21,12 @@ for result in shortened:
 % Shortened url at: doma.in/c99397ce-1715-4885-aaa4-973677c141f8
 ```
 
-### Calling the videoembed.py
-The bot can be called with the following syntax (if imported):
+### videoembed.py
+Syntax:
 ```
 videoembed.run(link.mp4, url_pred, path_to_directory)
 ```
-Fore example:
+For example:
 ```
 import videoembed
 
@@ -39,9 +39,6 @@ for result in embed:
 ```
 % Embed video at: doma.in/fa5b8e62-f5ab-45ee-8067-91f6bfd1e4c9
 ```
-
-> [!WARNING]
-> Placing files manually in the shortener's destination folder can cause problems.
 
 > [!NOTE]
 > If you plan to integrate it, then be aware of the premissions, because the default Apache2 configuration is not allowing you to paste to the /var/www/html without root premission.
