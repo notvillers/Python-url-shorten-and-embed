@@ -1,5 +1,5 @@
 import os
-import uuid
+import random_id
 
 def create_html(text): # creates the html for the webplayer
     skeleton = [
@@ -15,7 +15,7 @@ def run(link, url_pref, path):
     if path == "":
         path = os.path.dirname(__file__) # Path to the redirect files, for example with Apache2: /var/www/html/
     
-    next = str(uuid.uuid4())
+    next = str(random_id.generate())
 
     with open(path + "/" + next, 'w') as file:
         file.write(create_html(link))
