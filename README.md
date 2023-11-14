@@ -18,7 +18,7 @@ for result in shortened:
     print("Shortened url at: " + result)
 ```
 ```
-% Shortened url at: doma.in/c99397ce-1715-4885-aaa4-973677c141f8
+% Shortened url at: doma.in/YxuurvbqXptyj2dp
 ```
 
 ### videoembed.py
@@ -37,7 +37,7 @@ for result in embed:
     print("Embed video at: " + result)
 ```
 ```
-% Embed video at: doma.in/fa5b8e62-f5ab-45ee-8067-91f6bfd1e4c9
+% Embed video at: doma.in/doma.in/Gu3fbdrWvpVyQ6EX
 ```
 
 > [!NOTE]
